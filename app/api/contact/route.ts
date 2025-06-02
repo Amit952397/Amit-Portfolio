@@ -1,7 +1,68 @@
 import { type NextRequest, NextResponse } from "next/server"
-import { connectDB } from "@/utils/db"
-import Contact from "@/models/contact"
-import { transporter } from "@/utils/transporter"
+import mongoose from "mongoose"
+import nodemailer from "nodemailer"
+
+// MongoDB Connection
+const connectDB = async () => {
+  if (mongoose.connections[0].readyState) {
+    return
+  }
+
+  try {
+    await mongoose.connect(process.env.MONGODB_URI!, {
+      bufferCommands: false,
+    })
+    console.log("✅ Connected to MongoDB Atlas")
+  } catch (error) {
+    console.error("❌ MongoDB connection error:", error)
+    throw error
+  }
+}
+
+// Contact Message Schema
+const contactSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    trim: true,
+    lowercase: true,
+  },
+  subject: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  message: {
+    type: String,
+    required: true,
+    trim: true,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  status: {
+    type: String,
+    enum: ["new", "read", "replied"],
+    default: "new",
+  },
+})
+
+const Contact = mongoose.models.Contact || mongoose.model("Contact", contactSchema)
+
+// Email transporter setup
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+})
 
 export async function POST(request: NextRequest) {
   try {
