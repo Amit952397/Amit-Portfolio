@@ -511,17 +511,12 @@ const HorizontalSlider: FunctionComponent<{
   )
 }
 
-// Enhanced Grid Slider Component with Cursor/Touch Sliding
+// Grid Slider Component for Projects and Live Pages
 const GridSlider: FunctionComponent<{
   children: React.ReactNode
   itemsPerPage?: number
 }> = ({ children, itemsPerPage = 3 }) => {
   const [currentPage, setCurrentPage] = useState(0)
-  const [isDragging, setIsDragging] = useState(false)
-  const [startX, setStartX] = useState(0)
-  const [scrollLeft, setScrollLeft] = useState(0)
-  const containerRef = useRef<HTMLDivElement>(null)
-
   const childrenArray = React.Children.toArray(children)
   const totalPages = Math.ceil(childrenArray.length / itemsPerPage)
 
@@ -533,86 +528,17 @@ const GridSlider: FunctionComponent<{
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages)
   }
 
-  const goToPage = (page: number) => {
-    setCurrentPage(page)
-  }
-
-  // Mouse/Touch event handlers for sliding
-  const handleMouseDown = (e: React.MouseEvent) => {
-    setIsDragging(true)
-    setStartX(e.pageX - (containerRef.current?.offsetLeft || 0))
-    setScrollLeft(currentPage)
-  }
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setIsDragging(true)
-    setStartX(e.touches[0].pageX)
-    setScrollLeft(currentPage)
-  }
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging) return
-
-    const x = e.touches[0].pageX
-    const walk = x - startX // Direct distance calculation
-
-    // Store the current walk distance for use in touchend
-    e.currentTarget.dataset.walkDistance = walk.toString()
-  }
-
-  const handleMouseUp = () => {
-    setIsDragging(false)
-  }
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (!isDragging) return
-
-    const walkDistance = Number.parseFloat(e.currentTarget.dataset.walkDistance || "0")
-    const threshold = window.innerWidth / 5 // 20% of screen width as threshold
-
-    if (walkDistance > threshold && currentPage > 0) {
-      prevPage()
-    } else if (walkDistance < -threshold && currentPage < totalPages - 1) {
-      nextPage()
-    }
-
-    setIsDragging(false)
-  }
-
-  // Wheel event for horizontal scrolling
-  const handleWheel = (e: React.WheelEvent) => {
-    e.preventDefault()
-    if (e.deltaY > 0 && currentPage < totalPages - 1) {
-      nextPage()
-    } else if (e.deltaY < 0 && currentPage > 0) {
-      prevPage()
-    }
-  }
-
   const currentItems = childrenArray.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage)
 
   return (
     <div className="relative">
       <motion.div
-        ref={containerRef}
         key={currentPage}
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -50 }}
         transition={{ duration: 0.5 }}
-        className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 cursor-grab ${isDragging ? "cursor-grabbing" : ""}`}
-        onMouseDown={handleMouseDown}
-        onMouseMove={(e) => {
-          if (!isDragging) return
-          e.preventDefault()
-        }}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-        onWheel={handleWheel}
-        style={{ userSelect: "none", touchAction: "pan-y" }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {currentItems}
       </motion.div>
@@ -622,23 +548,17 @@ const GridSlider: FunctionComponent<{
         <>
           <motion.button
             onClick={prevPage}
-            disabled={currentPage === 0}
-            className={`absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-purple-600/80 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 ${
-              currentPage === 0 ? "opacity-50 cursor-not-allowed" : "hover:scale-110"
-            }`}
-            whileHover={{ scale: currentPage === 0 ? 1 : 1.1 }}
-            whileTap={{ scale: currentPage === 0 ? 1 : 0.9 }}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-purple-600/80 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
             <ChevronLeft className="h-6 w-6" />
           </motion.button>
           <motion.button
             onClick={nextPage}
-            disabled={currentPage === totalPages - 1}
-            className={`absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-purple-600/80 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 ${
-              currentPage === totalPages - 1 ? "opacity-50 cursor-not-allowed" : "hover:scale-110"
-            }`}
-            whileHover={{ scale: currentPage === totalPages - 1 ? 1 : 1.1 }}
-            whileTap={{ scale: currentPage === totalPages - 1 ? 1 : 0.9 }}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-purple-600/80 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
             <ChevronRight className="h-6 w-6" />
           </motion.button>
@@ -651,7 +571,7 @@ const GridSlider: FunctionComponent<{
           {Array.from({ length: totalPages }).map((_, index) => (
             <motion.button
               key={index}
-              onClick={() => goToPage(index)}
+              onClick={() => setCurrentPage(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentPage ? "bg-purple-500 scale-125" : "bg-purple-300/50 hover:bg-purple-400/70"
               }`}
@@ -661,16 +581,6 @@ const GridSlider: FunctionComponent<{
           ))}
         </div>
       )}
-
-      {/* Sliding Instructions */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
-        className="text-center mt-4"
-      >
-        <p className="text-sm text-gray-400">💡 Drag, scroll, or use arrows to navigate</p>
-      </motion.div>
     </div>
   )
 }
@@ -937,7 +847,6 @@ export default function Portfolio() {
           </Button>
         </motion.div>
       )}
-
       {/* Main content */}
       <div className={`flex-1 transition-all duration-300 ${sidebarOpen ? "lg:ml-72" : "lg:ml-0"}`}>
         {/* Hero Section */}
