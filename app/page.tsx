@@ -27,6 +27,8 @@ import {
   Award,
   Globe,
   FileText,
+  Camera,
+  Music,
   GamepadIcon,
   ShoppingCart,
   Sparkles,
@@ -64,7 +66,7 @@ const skills = [
   { name: "MongoDB", level: 78, category: "Database" },
   { name: "Docker", level: 75, category: "DevOps" },
 ]
-const experiences = [
+ const experiences = [
   {
     title: "Lead Developer – Nagar Seva (Smart City Utility Platform)",
     company: "Chandigarh University",
@@ -138,13 +140,12 @@ const experiences = [
     ],
     technologies: ["Firebase", "CSS", "JavaScript", "Firestore"],
   },
-]
+];
 
-const projects = [
+ const projects = [
   {
     title: "Nagar Seva – Smart Complaint Management",
-    description:
-      "Civic tech platform to manage public grievances like garbage collection, water issues, and electricity faults. Recognized in HackIndia and Project Expo up to 3rd phase.",
+    description: "Civic tech platform to manage public grievances like garbage collection, water issues, and electricity faults. Recognized in HackIndia and Project Expo up to 3rd phase.",
     image: "/placeholder.svg?height=200&width=300",
     tech: ["React", "Node.js", "MongoDB", "Firebase"],
     link: "#",
@@ -152,8 +153,7 @@ const projects = [
   },
   {
     title: "Student Test Platform",
-    description:
-      "Live web application that allows students to attempt online tests, submit answers, and view scores. Developed with Firebase backend.",
+    description: "Live web application that allows students to attempt online tests, submit answers, and view scores. Developed with Firebase backend.",
     image: "/placeholder.svg?height=200&width=300",
     tech: ["HTML", "CSS", "JavaScript", "Firebase"],
     link: "#",
@@ -161,8 +161,7 @@ const projects = [
   },
   {
     title: "AI Chatbot UI",
-    description:
-      "A clean, animated chatbot UI built using HTML, CSS, and JavaScript. Features message animations and responsive layout.",
+    description: "A clean, animated chatbot UI built using HTML, CSS, and JavaScript. Features message animations and responsive layout.",
     image: "/placeholder.svg?height=200&width=300",
     tech: ["HTML", "CSS", "JavaScript"],
     link: "#",
@@ -170,8 +169,7 @@ const projects = [
   },
   {
     title: "Game Zone – Tic Tac Toe & Ludo",
-    description:
-      "Fun and interactive browser-based games. Designed and developed for mobile and desktop using HTML5 and JavaScript.",
+    description: "Fun and interactive browser-based games. Designed and developed for mobile and desktop using HTML5 and JavaScript.",
     image: "/placeholder.svg?height=200&width=300",
     tech: ["HTML", "CSS", "JavaScript"],
     link: "#",
@@ -179,8 +177,7 @@ const projects = [
   },
   {
     title: "Login & Authentication System",
-    description:
-      "Secure login UI with Firebase Authentication and Firestore for user data storage. Focused on a clean UI and auth logic.",
+    description: "Secure login UI with Firebase Authentication and Firestore for user data storage. Focused on a clean UI and auth logic.",
     image: "/placeholder.svg?height=200&width=300",
     tech: ["CSS", "JavaScript", "Firebase", "Firestore"],
     link: "#",
@@ -202,13 +199,13 @@ const projects = [
     link: "#",
     github: "https://github.com/AmitKumar9430",
   },
-]
+];
 
-const livePages = [
+
+ const livePages = [
   {
     title: "CUNPTEL Cloud Exam Practice App",
-    description:
-      "An interactive web app to practice cloud certification exam questions, helping users prepare effectively with real-time feedback and analytics.",
+    description: "An interactive web app to practice cloud certification exam questions, helping users prepare effectively with real-time feedback and analytics.",
     image: "/placeholder.svg?height=200&width=300",
     category: "Education",
     tech: ["React", "Firebase", "Tailwind CSS"],
@@ -217,8 +214,7 @@ const livePages = [
   },
   {
     title: "Amit Singh's Games Collection",
-    description:
-      "Explore a variety of fun and engaging games created by Amit Singh. Visit the site to enjoy classic and modern browser games.",
+    description: "Explore a variety of fun and engaging games created by Amit Singh. Visit the site to enjoy classic and modern browser games.",
     image: "/placeholder.svg?height=200&width=300",
     category: "Gaming",
     tech: ["HTML5", "JavaScript", "CSS3"],
@@ -227,13 +223,12 @@ const livePages = [
   },
   {
     title: "Nagar Seva – Coming Soon",
-    description:
-      "Smart complaint management platform for civic issues like garbage, water, and electricity. Launching soon to make public grievance handling efficient.",
+    description: "Smart complaint management platform for civic issues like garbage, water, and electricity. Launching soon to make public grievance handling efficient.",
     image: "/placeholder.svg?height=200&width=300",
     category: "Civic Tech",
     tech: ["React", "Node.js", "MongoDB", "Firebase"],
     link: "#",
-    icon: Globe, // or choose another icon if you prefer
+    icon: Globe,  // or choose another icon if you prefer
   },
   {
     title: "Thank You Note",
@@ -262,7 +257,7 @@ const livePages = [
     link: "#",
     icon: ShoppingCart,
   },
-
+  
   {
     title: "Game Dashboard",
     description: "Gaming statistics and leaderboard application",
@@ -281,74 +276,68 @@ const livePages = [
     link: "#",
     icon: Globe,
   },
-]
+];
 
-const testimonials = [
+
+ const testimonials = [
   {
     name: "Dr. Ritu Bansal",
     role: "Dean, Department of Computer Science at Chandigarh University",
-    content:
-      "The professionalism and dedication shown in developing student-focused applications was truly commendable. The project met our academic goals and exceeded expectations.",
+    content: "The professionalism and dedication shown in developing student-focused applications was truly commendable. The project met our academic goals and exceeded expectations.",
     rating: 5,
     avatar: "/placeholder.svg?height=50&width=50",
   },
   {
     name: "Manish Verma",
     role: "Intel Certified Trainer at Chandigarh University",
-    content:
-      "A brilliant mind with a great grasp on Intel's oneAPI toolkit. Delivered an optimized project during the AI Bootcamp that impressed the panel.",
+    content: "A brilliant mind with a great grasp on Intel’s oneAPI toolkit. Delivered an optimized project during the AI Bootcamp that impressed the panel.",
     rating: 5,
     avatar: "/placeholder.svg?height=50&width=50",
   },
   {
     name: "Simran Kaur",
     role: "Event Coordinator, Tech Invent 2024 at CU",
-    content:
-      "Handled the live event portal flawlessly. From registrations to result processing, the system worked without a glitch. A huge asset during Tech Invent!",
+    content: "Handled the live event portal flawlessly. From registrations to result processing, the system worked without a glitch. A huge asset during Tech Invent!",
     rating: 5,
     avatar: "/placeholder.svg?height=50&width=50",
   },
   {
     name: "Amit Singh",
     role: "Lead Developer, Tech Invent Team at CU",
-    content:
-      "Built a robust backend for our university's flagship tech fest. Always delivered quality work on time with zero downtime during the event.",
+    content: "Built a robust backend for our university’s flagship tech fest. Always delivered quality work on time with zero downtime during the event.",
     rating: 5,
     avatar: "/placeholder.svg?height=50&width=50",
   },
   {
     name: "Amit Singh",
     role: "Lead Developer, Tech Invent Team at CU",
-    content:
-      "Built a robust backend for our university's flagship tech fest. Always delivered quality work on time with zero downtime during the event.",
+    content: "Built a robust backend for our university’s flagship tech fest. Always delivered quality work on time with zero downtime during the event.",
     rating: 5,
     avatar: "/placeholder.svg?height=50&width=50",
   },
   {
     name: "Amit Singh",
     role: "Lead Developer, Tech Invent Team at CU",
-    content:
-      "Built a robust backend for our university's flagship tech fest. Always delivered quality work on time with zero downtime during the event.",
+    content: "Built a robust backend for our university’s flagship tech fest. Always delivered quality work on time with zero downtime during the event.",
     rating: 5,
     avatar: "/placeholder.svg?height=50&width=50",
   },
   {
     name: "Manish Verma",
     role: "Intel Certified Trainer at Chandigarh University",
-    content:
-      "A brilliant mind with a great grasp on Intel's oneAPI toolkit. Delivered an optimized project during the AI Bootcamp that impressed the panel.",
+    content: "A brilliant mind with a great grasp on Intel’s oneAPI toolkit. Delivered an optimized project during the AI Bootcamp that impressed the panel.",
     rating: 5,
     avatar: "/placeholder.svg?height=50&width=50",
   },
   {
     name: "Simran Kaur",
     role: "Event Coordinator, Tech Invent 2024 at CU",
-    content:
-      "Handled the live event portal flawlessly. From registrations to result processing, the system worked without a glitch. A huge asset during Tech Invent!",
+    content: "Handled the live event portal flawlessly. From registrations to result processing, the system worked without a glitch. A huge asset during Tech Invent!",
     rating: 5,
     avatar: "/placeholder.svg?height=50&width=50",
   },
-]
+];
+
 
 // Social media links
 const socialLinks = {
@@ -507,80 +496,6 @@ const HorizontalSlider: FunctionComponent<{
       >
         <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6" />
       </motion.button>
-    </div>
-  )
-}
-
-// Grid Slider Component for Projects and Live Pages
-const GridSlider: FunctionComponent<{
-  children: React.ReactNode
-  itemsPerPage?: number
-}> = ({ children, itemsPerPage = 3 }) => {
-  const [currentPage, setCurrentPage] = useState(0)
-  const childrenArray = React.Children.toArray(children)
-  const totalPages = Math.ceil(childrenArray.length / itemsPerPage)
-
-  const nextPage = () => {
-    setCurrentPage((prev) => (prev + 1) % totalPages)
-  }
-
-  const prevPage = () => {
-    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages)
-  }
-
-  const currentItems = childrenArray.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage)
-
-  return (
-    <div className="relative">
-      <motion.div
-        key={currentPage}
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -50 }}
-        transition={{ duration: 0.5 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-      >
-        {currentItems}
-      </motion.div>
-
-      {/* Navigation Arrows */}
-      {totalPages > 1 && (
-        <>
-          <motion.button
-            onClick={prevPage}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-purple-600/80 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </motion.button>
-          <motion.button
-            onClick={nextPage}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-purple-600/80 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <ChevronRight className="h-6 w-6" />
-          </motion.button>
-        </>
-      )}
-
-      {/* Page Indicators */}
-      {totalPages > 1 && (
-        <div className="flex justify-center mt-8 space-x-2">
-          {Array.from({ length: totalPages }).map((_, index) => (
-            <motion.button
-              key={index}
-              onClick={() => setCurrentPage(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentPage ? "bg-purple-500 scale-125" : "bg-purple-300/50 hover:bg-purple-400/70"
-              }`}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            />
-          ))}
-        </div>
-      )}
     </div>
   )
 }
@@ -782,7 +697,7 @@ export default function Portfolio() {
                   whileHover={{ scale: 1.02 }}
                   className="mb-4 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20"
                 >
-                  <p className="text-sm text-gray-300 mb-2">Available for Hearing</p>
+                  <p className="text-sm text-gray-300 mb-2">Available for  Hearing</p>
                   <div className="flex items-center space-x-2">
                     <motion.div
                       animate={{ scale: [1, 1.2, 1] }}
@@ -1010,209 +925,201 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* About Section */}
-        <section id="about" className="py-12 px-4 sm:px-6 bg-black/20">
-          <div className="max-w-6xl mx-auto">
+         {/* About Section */}
+ <section id="about" className="py-12 px-4 sm:px-6 bg-black/20">
+  <div className="max-w-6xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="text-center mb-8"
+    >
+      <motion.h2
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4"
+      >
+        About Me
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1, duration: 0.5 }}
+        viewport={{ once: true }}
+        className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto"
+      >
+        I’m a passionate developer who brings creativity, logic, and modern tech together to build impactful web solutions.
+      </motion.p>
+    </motion.div>
+
+    <div className="grid md:grid-cols-2 gap-6 items-start">
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h3 className="text-lg sm:text-xl font-bold text-white mb-4">My Journey</h3>
+        <p className="text-gray-300 mb-4 text-sm sm:text-base leading-tight">
+          I'm a self-motivated developer with strong hands-on experience in full-stack development. From building civic platforms like <strong>Nagar Seva</strong> to fun projects like <strong>Game Zone</strong>, I enjoy creating projects that combine usefulness with interactivity.
+        </p>
+        <p className="text-gray-300 mb-4 text-sm sm:text-base leading-tight">
+          My stack includes technologies like <strong>React</strong>, <strong>Firebase</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong>. I also work on frontend design, deployment, database management, and user authentication. I thrive on building and deploying real-world apps.
+        </p>
+        <div className="grid grid-cols-2 gap-3">
+          <motion.div
+            whileHover={{ scale: 1.05, rotateY: 5 }}
+            className="text-center p-3 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20"
+          >
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-8"
+              className="text-xl sm:text-2xl font-bold text-purple-400 mb-1"
             >
-              <motion.h2
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4"
-              >
-                About Me
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1, duration: 0.5 }}
-                viewport={{ once: true }}
-                className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto"
-              >
-                I'm a passionate developer who brings creativity, logic, and modern tech together to build impactful web
-                solutions.
-              </motion.p>
+              <AnimatedCounter end={20} />+
             </motion.div>
+            <div className="text-sm text-gray-300">Projects Built</div>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05, rotateY: -5 }}
+            className="text-center p-3 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-xl sm:text-2xl font-bold text-purple-400 mb-1"
+            >
+              <AnimatedCounter end={3} />+
+            </motion.div>
+            <div className="text-sm text-gray-300">Years Learning & Growing</div>
+          </motion.div>
+        </div>
+      </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-6 items-start">
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="space-y-4"
+      >
+        <h3 className="text-lg sm:text-xl font-bold text-white mb-4">What I Offer</h3>
+        <div className="space-y-2">
+          {[
+            "Full-Stack Web App Development",
+            "Firebase & MongoDB Integrations",
+            "RESTful API & Backend Services",
+            "Responsive UI/UX with Tailwind CSS",
+            "Authentication with Firebase/Auth",
+            "Project Deployment on Netlify/Vercel",
+            "Creative Game Development in JS",
+            "Practical Coding Solutions & Demos",
+          ].map((service, index) => (
+            <motion.div
+              key={service}
+              initial={{ opacity: 0, x: 10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              whileHover={{ scale: 1.02, x: 5 }}
+              transition={{ delay: index * 0.1, duration: 0.4 }}
+              viewport={{ once: true }}
+              className="flex items-center space-x-2 p-2 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
+            >
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: index * 0.2 }}
               >
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-4">My Journey</h3>
-                <p className="text-gray-300 mb-4 text-sm sm:text-base leading-tight">
-                  I'm a self-motivated developer with strong hands-on experience in full-stack development. From
-                  building civic platforms like <strong>Nagar Seva</strong> to fun projects like{" "}
-                  <strong>Game Zone</strong>, I enjoy creating projects that combine usefulness with interactivity.
-                </p>
-                <p className="text-gray-300 mb-4 text-sm sm:text-base leading-tight">
-                  My stack includes technologies like <strong>React</strong>, <strong>Firebase</strong>,{" "}
-                  <strong>Node.js</strong>, and <strong>MongoDB</strong>. I also work on frontend design, deployment,
-                  database management, and user authentication. I thrive on building and deploying real-world apps.
-                </p>
-                <div className="grid grid-cols-2 gap-3">
-                  <motion.div
-                    whileHover={{ scale: 1.05, rotateY: 5 }}
-                    className="text-center p-3 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20"
-                  >
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.4, duration: 0.6 }}
-                      viewport={{ once: true }}
-                      className="text-xl sm:text-2xl font-bold text-purple-400 mb-1"
-                    >
-                      <AnimatedCounter end={20} />+
-                    </motion.div>
-                    <div className="text-sm text-gray-300">Projects Built</div>
-                  </motion.div>
-                  <motion.div
-                    whileHover={{ scale: 1.05, rotateY: -5 }}
-                    className="text-center p-3 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20"
-                  >
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.5, duration: 0.6 }}
-                      viewport={{ once: true }}
-                      className="text-xl sm:text-2xl font-bold text-purple-400 mb-1"
-                    >
-                      <AnimatedCounter end={3} />+
-                    </motion.div>
-                    <div className="text-sm text-gray-300">Years Learning & Growing</div>
-                  </motion.div>
-                </div>
+                <ChevronRight className="h-4 w-4 text-purple-400" />
               </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="space-y-4"
-              >
-                <h3 className="text-lg sm:text-xl font-bold text-white mb-4">What I Offer</h3>
-                <div className="space-y-2">
-                  {[
-                    "Full-Stack Web App Development",
-                    "Firebase & MongoDB Integrations",
-                    "RESTful API & Backend Services",
-                    "Responsive UI/UX with Tailwind CSS",
-                    "Authentication with Firebase/Auth",
-                    "Project Deployment on Netlify/Vercel",
-                    "Creative Game Development in JS",
-                    "Practical Coding Solutions & Demos",
-                  ].map((service, index) => (
-                    <motion.div
-                      key={service}
-                      initial={{ opacity: 0, x: 10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      whileHover={{ scale: 1.02, x: 5 }}
-                      transition={{ delay: index * 0.1, duration: 0.4 }}
-                      viewport={{ once: true }}
-                      className="flex items-center space-x-2 p-2 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
-                    >
-                      <motion.div
-                        animate={{ rotate: [0, 360] }}
-                        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: index * 0.2 }}
-                      >
-                        <ChevronRight className="h-4 w-4 text-purple-400" />
-                      </motion.div>
-                      <span className="text-sm sm:text-base text-gray-300">{service}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+              <span className="text-sm sm:text-base text-gray-300">{service}</span>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
         {/* Skills Section */}
-        <section id="skills" className="py-24 sm:py-28 px-4 sm:px-6 bg-black/20">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16 sm:mb-20"
-            >
-              <motion.h2
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8"
-              >
-                Skills & Expertise
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto"
-              >
-                Proficient in modern technologies and frameworks
-              </motion.p>
-            </motion.div>
+<section id="skills" className="py-24 sm:py-28 px-4 sm:px-6 bg-black/20">
+  <div className="max-w-6xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center mb-16 sm:mb-20"
+    >
+      <motion.h2
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8"
+      >
+        Skills & Expertise
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto"
+      >
+        Proficient in modern technologies and frameworks
+      </motion.p>
+    </motion.div>
 
-            <HorizontalSlider itemsPerSlide={windowWidth < 640 ? 1 : windowWidth < 1024 ? 2 : 4}>
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, rotateX: -30 }}
-                  whileInView={{ opacity: 1, rotateX: 0 }}
-                  whileHover={{
-                    scale: 1.05,
-                    rotateY: 5,
-                    boxShadow: "0 25px 50px rgba(168, 85, 247, 0.3)",
-                  }}
-                  transition={{ delay: (index % 4) * 0.1, duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="p-5 sm:p-7 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
-                >
-                  <div className="flex justify-between items-center mb-5">
-                    <h3 className="text-base sm:text-lg font-semibold text-white">{skill.name}</h3>
-                    <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
-                      <Badge
-                        variant="secondary"
-                        className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs"
-                      >
-                        {skill.category}
-                      </Badge>
-                    </motion.div>
-                  </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2.5 mb-3 overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      transition={{ delay: (index % 4) * 0.1 + 0.5, duration: 1.5, ease: "easeOut" }}
-                      viewport={{ once: true }}
-                      className="bg-gradient-to-r from-purple-600 to-pink-600 h-2.5 rounded-full relative"
-                    >
-                      <motion.div
-                        animate={{ x: [0, 10, 0] }}
-                        transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-                        className="absolute inset-0 bg-white/20 rounded-full"
-                      />
-                    </motion.div>
-                  </div>
-                  <div className="text-right text-sm text-gray-400">{skill.level}%</div>
-                </motion.div>
-              ))}
-            </HorizontalSlider>
+    <HorizontalSlider itemsPerSlide={windowWidth < 640 ? 1 : windowWidth < 1024 ? 2 : 4}>
+      {skills.map((skill, index) => (
+        <motion.div
+          key={skill.name}
+          initial={{ opacity: 0, rotateX: -30 }}
+          whileInView={{ opacity: 1, rotateX: 0 }}
+          whileHover={{
+            scale: 1.05,
+            rotateY: 5,
+            boxShadow: "0 25px 50px rgba(168, 85, 247, 0.3)",
+          }}
+          transition={{ delay: (index % 4) * 0.1, duration: 0.5 }}
+          viewport={{ once: true }}
+          className="p-5 sm:p-7 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
+        >
+          <div className="flex justify-between items-center mb-5">
+            <h3 className="text-base sm:text-lg font-semibold text-white">{skill.name}</h3>
+            <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
+              <Badge variant="secondary" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs">
+                {skill.category}
+              </Badge>
+            </motion.div>
           </div>
-        </section>
+          <div className="w-full bg-gray-700 rounded-full h-2.5 mb-3 overflow-hidden">
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: `${skill.level}%` }}
+              transition={{ delay: (index % 4) * 0.1 + 0.5, duration: 1.5, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 h-2.5 rounded-full relative"
+            >
+              <motion.div
+                animate={{ x: [0, 10, 0] }}
+                transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+                className="absolute inset-0 bg-white/20 rounded-full"
+              />
+            </motion.div>
+          </div>
+          <div className="text-right text-sm text-gray-400">{skill.level}%</div>
+        </motion.div>
+      ))}
+    </HorizontalSlider>
+  </div>
+</section>
         {/* Experience Section */}
         <section id="experience" className="py-16 sm:py-20 px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
@@ -1366,382 +1273,384 @@ export default function Portfolio() {
             </HorizontalSlider>
           </div>
         </section>
-
         {/* Projects Section */}
-        <section id="projects" className="py-16 sm:py-20 px-4 sm:px-6 bg-black/20">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12 sm:mb-16"
-            >
-              <motion.h2
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
-              >
-                Featured Projects
-              </motion.h2>
-              <motion.p
+       <section id="projects" className="py-16 sm:py-20 px-4 sm:px-6 bg-black/20">
+  <div className="max-w-6xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center mb-12 sm:mb-16"
+    >
+      <motion.h2
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
+      >
+        Featured Projects
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto"
+      >
+        A showcase of my recent work and achievements
+      </motion.p>
+    </motion.div>
+
+    <HorizontalSlider itemsPerSlide={windowWidth < 640 ? 1 : windowWidth < 1024 ? 2 : 3} columns={3}>
+      {projects.map((project, index) => (
+        <motion.div
+          key={project.title}
+          initial={{ opacity: 0, rotateY: -15 }}
+          whileInView={{ opacity: 1, rotateY: 0 }}
+          whileHover={{
+            scale: 1.05,
+            rotateY: 5,
+            boxShadow: "0 25px 50px rgba(168, 85, 247, 0.3)",
+          }}
+          transition={{ delay: (index % 3) * 0.2, duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 group overflow-hidden h-full">
+            <CardHeader className="p-0">
+              <div className="relative overflow-hidden rounded-t-lg">
+                <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent flex items-center justify-center"
+                >
+                  <motion.div initial={{ scale: 0 }} whileHover={{ scale: 1 }} transition={{ delay: 0.1 }}>
+                    <Sparkles className="h-12 w-12 text-white" />
+                  </motion.div>
+                </motion.div>
+              </div>
+            </CardHeader>
+            <CardContent className="p-4 sm:p-6 flex flex-col flex-grow">
+              <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto"
+                className="flex-grow"
               >
-                A showcase of my recent work and achievements
-              </motion.p>
-            </motion.div>
+                <CardTitle className="text-white mb-3">{project.title}</CardTitle>
+                <p className="text-gray-300 mb-4">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.map((tech, i) => (
+                    <motion.div
+                      key={tech}
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ delay: 0.4 + i * 0.1, duration: 0.3 }}
+                      viewport={{ once: true }}
+                    >
+                      <Badge
+                        variant="secondary"
+                        className="bg-gradient-to-r from-purple-600 to-pink-600 text-white"
+                      >
+                        {tech}
+                      </Badge>
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="flex space-x-4 mt-auto">
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-purple-500 text-purple-400 hover:bg-purple-500/20"
+                      asChild
+                    >
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  </motion.div>
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-purple-500 text-purple-400 hover:bg-purple-500/20"
+                      asChild
+                    >
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4 mr-2" />
+                        Code
+                      </a>
+                    </Button>
+                  </motion.div>
+                </div>
+              </motion.div>
+            </CardContent>
+          </Card>
+        </motion.div>
+      ))}
+    </HorizontalSlider>
+  </div>
+</section>
+{/*live -page project*/}
+         <section id="live-pages" className="py-16 sm:py-20 px-4 sm:px-6">
+  <div className="max-w-6xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center mb-12 sm:mb-16"
+    >
+      <motion.h2
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
+      >
+        Live Pages & Demos
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto"
+      >
+        Interactive demonstrations of various web applications and designs
+      </motion.p>
+    </motion.div>
 
-            <GridSlider itemsPerPage={3}>
-              {projects.map((project, index) => (
+    <HorizontalSlider itemsPerSlide={windowWidth < 640 ? 1 : windowWidth < 1024 ? 2 : 3} columns={3}>
+      {livePages.map((page, index) => (
+        <motion.div
+          key={page.title}
+          initial={{ opacity: 0, rotateX: -20 }}
+          whileInView={{ opacity: 1, rotateX: 0 }}
+          whileHover={{
+            scale: 1.03,
+            rotateY: 3,
+            boxShadow: "0 20px 40px rgba(168, 85, 247, 0.25)",
+          }}
+          transition={{ delay: (index % 3) * 0.1, duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 group h-full overflow-hidden">
+            <CardHeader className="p-0">
+              <div className="relative overflow-hidden rounded-t-lg">
+                <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
+                  <Image
+                    src={page.image || "/placeholder.svg"}
+                    alt={page.title}
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover"
+                  />
+                </motion.div>
                 <motion.div
-                  key={project.title}
-                  initial={{ opacity: 0, rotateY: -15 }}
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent"
+                />
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="absolute top-4 left-4"
+                >
+                  <Badge className="bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+                    <motion.div
+                      animate={{ rotate: [0, 360] }}
+                      transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
+                    >
+                      <page.icon className="h-3 w-3 mr-1" />
+                    </motion.div>
+                    {page.category}
+                  </Badge>
+                </motion.div>
+              </div>
+            </CardHeader>
+            <CardContent className="p-4 sm:p-6 flex flex-col flex-grow">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                viewport={{ once: true }}
+                className="flex-grow"
+              >
+                <CardTitle className="text-white mb-3">{page.title}</CardTitle>
+                <p className="text-gray-300 mb-4 flex-grow">{page.description}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {page.tech.map((tech, i) => (
+                    <motion.div
+                      key={tech}
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ delay: 0.5 + i * 0.1, duration: 0.3 }}
+                      viewport={{ once: true }}
+                    >
+                      <Badge variant="outline" className="border-purple-500/50 text-purple-300">
+                        {tech}
+                      </Badge>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <Button
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
+                  asChild
+                >
+                  <a href={page.link} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    View Live Page
+                  </a>
+                </Button>
+              </motion.div>
+            </CardContent>
+          </Card>
+        </motion.div>
+      ))}
+    </HorizontalSlider>
+  </div>
+</section>
+ {/* Testimonials Section */}
+<section id="testimonials" className="py-20 px-6 bg-black/20">
+  <div className="max-w-6xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <motion.h2
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-4xl lg:text-5xl font-bold text-white mb-6"
+      >
+        Testimonials
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1}}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-xl text-gray-300 max-w-3xl mx-auto"
+      >
+        What Professionals say about working with me
+      </motion.p>
+    </motion.div>
+
+    <HorizontalSlider
+      itemsPerSlide={1} // Each slide contains a 2x2 grid
+      columns={1} // Treat the grid as a single item per slide
+    >
+      {Array(Math.ceil(testimonials.length / 4))
+        .fill()
+        .map((_, slideIndex) => (
+          <div
+            key={slideIndex}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+          >
+            {testimonials
+              .slice(slideIndex * 4, slideIndex * 4 + 4)
+              .map((testimonial, index) => (
+                <motion.div
+                  key={testimonial.name}
+                  initial={{ opacity: 0, rotateY: -20 }}
                   whileInView={{ opacity: 1, rotateY: 0 }}
                   whileHover={{
                     scale: 1.05,
                     rotateY: 5,
                     boxShadow: "0 25px 50px rgba(168, 85, 247, 0.3)",
                   }}
-                  transition={{ delay: (index % 3) * 0.2, duration: 0.8 }}
+                  transition={{ delay: index * 0.2, duration: 0.8 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 group overflow-hidden h-full">
-                    <CardHeader className="p-0">
-                      <div className="relative overflow-hidden rounded-t-lg">
-                        <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
-                          <Image
-                            src={project.image || "/placeholder.svg"}
-                            alt={project.title}
-                            width={300}
-                            height={200}
-                            className="w-full h-48 object-cover"
-                          />
-                        </motion.div>
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          whileHover={{ opacity: 1 }}
-                          className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent flex items-center justify-center"
-                        >
-                          <motion.div initial={{ scale: 0 }} whileHover={{ scale: 1 }} transition={{ delay: 0.1 }}>
-                            <Sparkles className="h-12 w-12 text-white" />
-                          </motion.div>
-                        </motion.div>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="p-4 sm:p-6 flex flex-col flex-grow">
+                  <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 h-full">
+                    <CardContent className="p-6">
                       <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.3, duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="flex-grow"
+                        className="flex items-center mb-4"
                       >
-                        <CardTitle className="text-white mb-3">{project.title}</CardTitle>
-                        <p className="text-gray-300 mb-4">{project.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {project.tech.map((tech, i) => (
-                            <motion.div
-                              key={tech}
-                              initial={{ opacity: 0, scale: 0 }}
-                              whileInView={{ opacity: 1, scale: 1 }}
-                              whileHover={{ scale: 1.1 }}
-                              transition={{ delay: 0.4 + i * 0.1, duration: 0.3 }}
-                              viewport={{ once: true }}
-                            >
-                              <Badge
-                                variant="secondary"
-                                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white"
-                              >
-                                {tech}
-                              </Badge>
-                            </motion.div>
-                          ))}
-                        </div>
-                        <div className="flex space-x-4 mt-auto">
-                          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              className="border-purple-500 text-purple-400 hover:bg-purple-500/20"
-                              asChild
-                            >
-                              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                <ExternalLink className="h-4 w-4 mr-2" />
-                                Live Demo
-                              </a>
-                            </Button>
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, rotate: -180 }}
+                            whileInView={{ opacity: 1, rotate: 0 }}
+                            transition={{ delay: 0.4 + i * 0.1, duration: 0.5 }}
+                            viewport={{ once: true }}
+                          >
+                            <Star className="h-5 w-5 text-yellow-400 fill-current" />
                           </motion.div>
-                          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              className="border-purple-500 text-purple-400 hover:bg-purple-500/20"
-                              asChild
-                            >
-                              <a href={project.github} target="_blank" rel="noopener noreferrer">
-                                <Github className="h-4 w-4 mr-2" />
-                                Code
-                              </a>
-                            </Button>
-                          </motion.div>
-                        </div>
+                        ))}
                       </motion.div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </GridSlider>
-          </div>
-        </section>
-
-        {/* Live Pages Section */}
-        <section id="live-pages" className="py-16 sm:py-20 px-4 sm:px-6">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12 sm:mb-16"
-            >
-              <motion.h2
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
-              >
-                Live Pages & Demos
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto"
-              >
-                Interactive demonstrations of various web applications and designs
-              </motion.p>
-            </motion.div>
-
-            <GridSlider itemsPerPage={3}>
-              {livePages.map((page, index) => (
-                <motion.div
-                  key={page.title}
-                  initial={{ opacity: 0, rotateX: -20 }}
-                  whileInView={{ opacity: 1, rotateX: 0 }}
-                  whileHover={{
-                    scale: 1.03,
-                    rotateY: 3,
-                    boxShadow: "0 20px 40px rgba(168, 85, 247, 0.25)",
-                  }}
-                  transition={{ delay: (index % 3) * 0.1, duration: 0.8 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 group h-full overflow-hidden">
-                    <CardHeader className="p-0">
-                      <div className="relative overflow-hidden rounded-t-lg">
-                        <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
-                          <Image
-                            src={page.image || "/placeholder.svg"}
-                            alt={page.title}
-                            width={300}
-                            height={200}
-                            className="w-full h-48 object-cover"
-                          />
-                        </motion.div>
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          whileHover={{ opacity: 1 }}
-                          className="absolute inset-0 bg-gradient-to-t from-purple-900/80 to-transparent"
-                        />
-                        <motion.div
-                          initial={{ opacity: 0, scale: 0 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.3, duration: 0.5 }}
-                          viewport={{ once: true }}
-                          className="absolute top-4 left-4"
-                        >
-                          <Badge className="bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-                            <motion.div
-                              animate={{ rotate: [0, 360] }}
-                              transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
-                            >
-                              <page.icon className="h-3 w-3 mr-1" />
-                            </motion.div>
-                            {page.category}
-                          </Badge>
-                        </motion.div>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="p-4 sm:p-6 flex flex-col flex-grow">
-                      <motion.div
+                      <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ delay: 0.4, duration: 0.5 }}
+                        transition={{ delay: 0.5, duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="flex-grow"
+                        className="text-gray-300 mb-6 italic"
                       >
-                        <CardTitle className="text-white mb-3">{page.title}</CardTitle>
-                        <p className="text-gray-300 mb-4 flex-grow">{page.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {page.tech.map((tech, i) => (
-                            <motion.div
-                              key={tech}
-                              initial={{ opacity: 0, scale: 0 }}
-                              whileInView={{ opacity: 1, scale: 1 }}
-                              whileHover={{ scale: 1.1 }}
-                              transition={{ delay: 0.5 + i * 0.1, duration: 0.3 }}
-                              viewport={{ once: true }}
-                            >
-                              <Badge variant="outline" className="border-purple-500/50 text-purple-300">
-                                {tech}
-                              </Badge>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </motion.div>
+                        "{testimonial.content}"
+                      </motion.p>
                       <motion.div
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.6, duration: 0.5 }}
                         viewport={{ once: true }}
+                        className="flex items-center space-x-4"
                       >
-                        <Button
-                          className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
-                          asChild
+                        <motion.div
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-white font-bold"
                         >
-                          <a href={page.link} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4 mr-2" />
-                            View Live Page
-                          </a>
-                        </Button>
+                          {testimonial.name.charAt(0)}
+                        </motion.div>
+                        <div>
+                          <div className="font-semibold text-white">{testimonial.name}</div>
+                          <div className="text-sm text-gray-400">{testimonial.role}</div>
+                        </div>
                       </motion.div>
                     </CardContent>
                   </Card>
                 </motion.div>
               ))}
-            </GridSlider>
           </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section id="testimonials" className="py-20 px-6 bg-black/20">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <motion.h2
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-4xl lg:text-5xl font-bold text-white mb-6"
-              >
-                Testimonials
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-xl text-gray-300 max-w-3xl mx-auto"
-              >
-                What Professionals say about working with me
-              </motion.p>
-            </motion.div>
-
-            <HorizontalSlider
-              itemsPerSlide={1} // Each slide contains a 2x2 grid
-              columns={1} // Treat the grid as a single item per slide
-            >
-              {Array(Math.ceil(testimonials.length / 4))
-                .fill()
-                .map((_, slideIndex) => (
-                  <div key={slideIndex} className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {testimonials.slice(slideIndex * 4, slideIndex * 4 + 4).map((testimonial, index) => (
-                      <motion.div
-                        key={testimonial.name}
-                        initial={{ opacity: 0, rotateY: -20 }}
-                        whileInView={{ opacity: 1, rotateY: 0 }}
-                        whileHover={{
-                          scale: 1.05,
-                          rotateY: 5,
-                          boxShadow: "0 25px 50px rgba(168, 85, 247, 0.3)",
-                        }}
-                        transition={{ delay: index * 0.2, duration: 0.8 }}
-                        viewport={{ once: true }}
-                      >
-                        <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 h-full">
-                          <CardContent className="p-6">
-                            <motion.div
-                              initial={{ opacity: 0, scale: 0 }}
-                              whileInView={{ opacity: 1, scale: 1 }}
-                              transition={{ delay: 0.3, duration: 0.5 }}
-                              viewport={{ once: true }}
-                              className="flex items-center mb-4"
-                            >
-                              {[...Array(testimonial.rating)].map((_, i) => (
-                                <motion.div
-                                  key={i}
-                                  initial={{ opacity: 0, rotate: -180 }}
-                                  whileInView={{ opacity: 1, rotate: 0 }}
-                                  transition={{ delay: 0.4 + i * 0.1, duration: 0.5 }}
-                                  viewport={{ once: true }}
-                                >
-                                  <Star className="h-5 w-5 text-yellow-400 fill-current" />
-                                </motion.div>
-                              ))}
-                            </motion.div>
-                            <motion.p
-                              initial={{ opacity: 0 }}
-                              whileInView={{ opacity: 1 }}
-                              transition={{ delay: 0.5, duration: 0.5 }}
-                              viewport={{ once: true }}
-                              className="text-gray-300 mb-6 italic"
-                            >
-                              "{testimonial.content}"
-                            </motion.p>
-                            <motion.div
-                              initial={{ opacity: 0, x: -20 }}
-                              whileInView={{ opacity: 1, x: 0 }}
-                              transition={{ delay: 0.6, duration: 0.5 }}
-                              viewport={{ once: true }}
-                              className="flex items-center space-x-4"
-                            >
-                              <motion.div
-                                whileHover={{ scale: 1.1, rotate: 5 }}
-                                className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-white font-bold"
-                              >
-                                {testimonial.name.charAt(0)}
-                              </motion.div>
-                              <div>
-                                <div className="font-semibold text-white">{testimonial.name}</div>
-                                <div className="text-sm text-gray-400">{testimonial.role}</div>
-                              </div>
-                            </motion.div>
-                          </CardContent>
-                        </Card>
-                      </motion.div>
-                    ))}
-                  </div>
-                ))}
-            </HorizontalSlider>
-          </div>
-        </section>
-
+        ))}
+    </HorizontalSlider>
+  </div>
+</section>
+ 
         {/* Contact Section */}
         <section id="contact" className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
