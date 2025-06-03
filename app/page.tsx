@@ -1691,9 +1691,9 @@ export default function Portfolio() {
                 <h3 className="text-2xl font-bold text-white mb-8">Contact Information</h3>
                 <div className="space-y-6">
                   {[
-                    { icon: Mail, label: "Email", value: "amitkumar@example.com" },
-                    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-                    { icon: MapPin, label: "Location", value: "San Francisco, CA" },
+                    { icon: Mail, label: "Email", value: "23bcs12621@cuchd.in" },
+                    { icon: Phone, label: "Phone", value: "+91-9523974130" },
+                    { icon: MapPin, label: "Location", value: "Dumariya ,Gaya, Bihar ,India " },
                     { icon: Calendar, label: "Availability", value: "Available for new projects" },
                   ].map((item, index) => (
                     <motion.div
