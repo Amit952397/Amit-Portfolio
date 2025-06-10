@@ -53,6 +53,7 @@ const navigation = [
 ]
 
 const skills = [
+  { name: "Machine learning (ML)/Deep Learning (DL)", level: 95, category: "AIML" },
   { name: "React/Next.js", level: 95, category: "Frontend" },
   { name: "Node.js/Express.js", level: 92, category: "Backend" },
   { name: "Hadoop/Big Data", level: 90, category: "Big Data" },
