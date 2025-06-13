@@ -1,9 +1,24 @@
 import { NextResponse } from "next/server"
-import { supabaseServer, checkSupabaseConnection } from "@/lib/supabase"
+import { getSupabaseServer, checkSupabaseConnection } from "@/lib/supabase"
 
 export async function POST(request: Request) {
   try {
-    // Check Supabase connection first
+    // Check if environment variables are available
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+      console.error("Missing Supabase environment variables")
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Server configuration error. Please contact the administrator.",
+        },
+        { status: 500 },
+      )
+    }
+
+    // Get Supabase client
+    const supabaseServer = getSupabaseServer()
+
+    // Check Supabase connection
     const connectionCheck = await checkSupabaseConnection()
     if (!connectionCheck.success) {
       console.error("Supabase connection error:", connectionCheck.error)
