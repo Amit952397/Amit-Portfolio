@@ -38,7 +38,6 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Star, Phone, MapPin, Calendar, Send } from "lucide-react"
-import { ContactFormFallback } from "@/components/contact-form-fallback"
 
 const navigation = [
   { name: "Home", href: "#home", icon: Home },
@@ -596,8 +595,6 @@ export default function Portfolio() {
     message: "",
   })
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
-  const [isSupabaseConfigured, setIsSupabaseConfigured] = useState(true)
-
   const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 0)
 
   useEffect(() => {
@@ -655,12 +652,6 @@ export default function Portfolio() {
 
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
-  useEffect(() => {
-    // Check if Supabase environment variables are available
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-    setIsSupabaseConfigured(!!supabaseUrl)
   }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -1865,115 +1856,111 @@ export default function Portfolio() {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                {isSupabaseConfigured ? (
-                  <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20">
-                    <CardHeader>
-                      <CardTitle className="text-white">Send a Message</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <form onSubmit={handleSubmit} className="space-y-6">
-                        <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.2, duration: 0.5 }}
-                          viewport={{ once: true }}
-                          className="grid md:grid-cols-2 gap-4"
-                        >
-                          <div>
-                            <Input
-                              placeholder="Your Name"
-                              value={formData.name}
-                              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                              className="bg-black/20 border-purple-500/30 text-white placeholder:text-gray-400 focus:border-purple-400 transition-all duration-300"
-                              required
-                            />
-                          </div>
-                          <div>
-                            <Input
-                              type="email"
-                              placeholder="Your Email"
-                              value={formData.email}
-                              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                              className="bg-black/20 border-purple-500/30 text-white placeholder:text-gray-400 focus:border-purple-400 transition-all duration-300"
-                              required
-                            />
-                          </div>
-                        </motion.div>
-                        <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.3, duration: 0.5 }}
-                          viewport={{ once: true }}
-                        >
+                <Card className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20">
+                  <CardHeader>
+                    <CardTitle className="text-white">Send a Message</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                        viewport={{ once: true }}
+                        className="grid md:grid-cols-2 gap-4"
+                      >
+                        <div>
                           <Input
-                            placeholder="Subject"
-                            value={formData.subject}
-                            onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                            placeholder="Your Name"
+                            value={formData.name}
+                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             className="bg-black/20 border-purple-500/30 text-white placeholder:text-gray-400 focus:border-purple-400 transition-all duration-300"
                             required
                           />
-                        </motion.div>
-                        <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.4, duration: 0.5 }}
-                          viewport={{ once: true }}
-                        >
-                          <Textarea
-                            placeholder="Your Message"
-                            rows={5}
-                            value={formData.message}
-                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        </div>
+                        <div>
+                          <Input
+                            type="email"
+                            placeholder="Your Email"
+                            value={formData.email}
+                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             className="bg-black/20 border-purple-500/30 text-white placeholder:text-gray-400 focus:border-purple-400 transition-all duration-300"
                             required
                           />
-                        </motion.div>
-                        <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          transition={{ delay: 0.5, duration: 0.5 }}
-                          viewport={{ once: true }}
+                        </div>
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3, duration: 0.5 }}
+                        viewport={{ once: true }}
+                      >
+                        <Input
+                          placeholder="Subject"
+                          value={formData.subject}
+                          onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                          className="bg-black/20 border-purple-500/30 text-white placeholder:text-gray-400 focus:border-purple-400 transition-all duration-300"
+                          required
+                        />
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4, duration: 0.5 }}
+                        viewport={{ once: true }}
+                      >
+                        <Textarea
+                          placeholder="Your Message"
+                          rows={5}
+                          value={formData.message}
+                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                          className="bg-black/20 border-purple-500/30 text-white placeholder:text-gray-400 focus:border-purple-400 transition-all duration-300"
+                          required
+                        />
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        transition={{ delay: 0.5, duration: 0.5 }}
+                        viewport={{ once: true }}
+                      >
+                        <Button
+                          type="submit"
+                          className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg shadow-purple-500/25"
                         >
-                          <Button
-                            type="submit"
-                            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg shadow-purple-500/25"
+                          Send Message
+                          <motion.div
+                            animate={{ x: [0, 5, 0] }}
+                            transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
                           >
-                            Send Message
-                            <motion.div
-                              animate={{ x: [0, 5, 0] }}
-                              transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
-                            >
-                              <Send className="ml-2 h-5 w-5" />
-                            </motion.div>
-                          </Button>
-                        </motion.div>
-                      </form>
-                      {submitStatus === "success" && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          className="mt-4 p-3 bg-green-500/20 border border-green-500/30 rounded-md text-green-400 text-center"
-                        >
-                          Message sent successfully! I'll get back to you soon.
-                        </motion.div>
-                      )}
+                            <Send className="ml-2 h-5 w-5" />
+                          </motion.div>
+                        </Button>
+                      </motion.div>
+                    </form>
+                    {submitStatus === "success" && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-4 p-3 bg-green-500/20 border border-green-500/30 rounded-md text-green-400 text-center"
+                      >
+                        Message sent successfully! I'll get back to you soon.
+                      </motion.div>
+                    )}
 
-                      {submitStatus === "error" && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          className="mt-4 p-3 bg-red-500/20 border border-red-500/30 rounded-md text-red-400 text-center"
-                        >
-                          Failed to send message. Please try again later.
-                        </motion.div>
-                      )}
-                    </CardContent>
-                  </Card>
-                ) : (
-                  <ContactFormFallback />
-                )}
+                    {submitStatus === "error" && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="mt-4 p-3 bg-red-500/20 border border-red-500/30 rounded-md text-red-400 text-center"
+                      >
+                        Failed to send message. Please try again later.
+                      </motion.div>
+                    )}
+                  </CardContent>
+                </Card>
               </motion.div>
             </div>
           </div>
