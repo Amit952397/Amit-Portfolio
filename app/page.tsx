@@ -216,6 +216,15 @@ const livePages = [
     icon: FileText,
   },
   {
+  title: "GPA Calculator for Universities",
+  description: "A professional web app for calculating SGPA and CGPA using the standard 10-point grading scale. Features a user-friendly interface to add subjects, assign credits and grades, and get instant results.",
+  image: "/placeholder.svg?height=200&width=300",
+  category: "Education",
+  tech: ["React", "TypeScript", "Tailwind CSS"],
+  link: "https://dynamic-clafoutis-47be23.netlify.app/",
+  icon: FileText,
+},
+  {
     title: "Amit Singh's Games Collection",
     description:
       "Explore a variety of fun and engaging games created by Amit Singh. Visit the site to enjoy classic and modern browser games.",
