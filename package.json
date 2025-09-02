@@ -74,3 +74,14 @@
     "typescript": "5.9.2"
   }
 }
+{
+  "pnpm": {
+    "overrides": {
+      "@ai-sdk/gateway>zod": "4",
+      "@ai-sdk/provider-utils>zod": "4",
+      "@ai-sdk/xai>zod": "4",
+      "@ai-sdk/openai-compatible>zod": "4",
+      "ai>zod": "4"
+    }
+  }
+}
