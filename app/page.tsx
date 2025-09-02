@@ -38,6 +38,7 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Star, Phone, MapPin, Calendar, Send } from "lucide-react"
+import { ChatWidget } from "@/components/chat-widget"
 
 const navigation = [
   { name: "Home", href: "#home", icon: Home },
@@ -216,14 +217,15 @@ const livePages = [
     icon: FileText,
   },
   {
-  title: "GPA Calculator for Universities",
-  description: "A professional web app for calculating SGPA and CGPA using the standard 10-point grading scale. Features a user-friendly interface to add subjects, assign credits and grades, and get instant results.",
-  image: "/placeholder.svg?height=200&width=300",
-  category: "Education",
-  tech: ["React", "TypeScript", "Tailwind CSS"],
-  link: "https://dynamic-clafoutis-47be23.netlify.app/",
-  icon: FileText,
-},
+    title: "GPA Calculator for Universities",
+    description:
+      "A professional web app for calculating SGPA and CGPA using the standard 10-point grading scale. Features a user-friendly interface to add subjects, assign credits and grades, and get instant results.",
+    image: "/placeholder.svg?height=200&width=300",
+    category: "Education",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
+    link: "https://dynamic-clafoutis-47be23.netlify.app/",
+    icon: FileText,
+  },
   {
     title: "Amit Singh's Games Collection",
     description:
@@ -990,7 +992,7 @@ export default function Portfolio() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button
                     variant="outline"
-                    className="border-purple-500 text-purple-400 hover:bg-purple-500/20 px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg w-full sm:w-auto"
+                    className="border-purple-500 text-purple-400 hover:bg-purple-500/20 px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg w-full sm:w-auto bg-transparent"
                     asChild
                   >
                     <a href="/files/amit-kumar-cv.pdf" download="Amit-Kumar-CV.pdf">
@@ -1088,7 +1090,8 @@ export default function Portfolio() {
                 className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto"
               >
                 I’m a passionate developer who brings creativity, logic, and modern tech together to build impactful web
-                solutions.
+                solutions. I’m also well‑experienced in Machine Learning (ML) and Deep Learning (DL), turning data into
+                intelligent features and deploying models in real‑world apps.
               </motion.p>
             </motion.div>
 
@@ -1106,9 +1109,11 @@ export default function Portfolio() {
                   <strong>Game Zone</strong>, I enjoy creating projects that combine usefulness with interactivity.
                 </p>
                 <p className="text-gray-300 mb-4 text-sm sm:text-base leading-tight">
-                  My stack includes technologies like <strong>React</strong>, <strong>Firebase</strong>,{" "}
-                  <strong>Node.js</strong>, and <strong>MongoDB</strong>. I also work on frontend design, deployment,
-                  database management, and user authentication. I thrive on building and deploying real-world apps.
+                  My stack includes <strong>React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>, and
+                  databases like
+                  <strong> MongoDB</strong> and <strong>Postgres</strong>. On the AI side, I work with{" "}
+                  <strong>ML/DL</strong> for classification, computer vision, and NLP pipelines, from data preprocessing
+                  to training and deployment.
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                   <motion.div
@@ -1154,6 +1159,7 @@ export default function Portfolio() {
                 <h3 className="text-lg sm:text-xl font-bold text-white mb-4">What I Offer</h3>
                 <div className="space-y-2">
                   {[
+                    "Machine Learning (ML) & Deep Learning (DL) solutions (model training, inference APIs, basic MLOps)",
                     "Full-Stack Web App Development",
                     "Firebase & MongoDB Integrations",
                     "RESTful API & Backend Services",
@@ -1518,7 +1524,7 @@ export default function Portfolio() {
                             <Button
                               variant="outline"
                               size="sm"
-                              className="border-purple-500 text-purple-400 hover:bg-purple-500/20"
+                              className="border-purple-500 text-purple-400 hover:bg-purple-500/20 bg-transparent"
                               asChild
                             >
                               <a href={project.link} target="_blank" rel="noopener noreferrer">
@@ -1531,7 +1537,7 @@ export default function Portfolio() {
                             <Button
                               variant="outline"
                               size="sm"
-                              className="border-purple-500 text-purple-400 hover:bg-purple-500/20"
+                              className="border-purple-500 text-purple-400 hover:bg-purple-500/20 bg-transparent"
                               asChild
                             >
                               <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -2031,6 +2037,7 @@ export default function Portfolio() {
           />
         )}
       </AnimatePresence>
+      <ChatWidget />
     </div>
   )
 }
