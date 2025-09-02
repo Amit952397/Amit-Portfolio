@@ -9,6 +9,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+  webpack: (config) => {
+    config.resolve = config.resolve || {};
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+      'zod/v3': 'zod',
+      'zod/v4': 'zod',
+    };
+    return config;
+  },
+};
 
-export default nextConfig
+export default nextConfig;
