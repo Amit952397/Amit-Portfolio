@@ -38,6 +38,7 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Star, Phone, MapPin, Calendar, Send } from "lucide-react"
+import { ChatWidget } from "@/components/chat-widget"
 
 const navigation = [
   { name: "Home", href: "#home", icon: Home },
@@ -2036,6 +2037,7 @@ export default function Portfolio() {
           />
         )}
       </AnimatePresence>
+      <ChatWidget />
     </div>
   )
 }
